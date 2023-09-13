@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Changer</title>
+</head>
+<body style="background-color: #212121;">
+    <div>
+        <button id="grey" style = " padding: 25px; margin: 25px;">Grey</button>
+        <button id="Yellow" style = " padding: 25px; margin: 25px;">Yello</button>
+        <button id="green" style = " padding: 25px; margin: 25px;">Green</button>
+        <button id="red" style = " padding: 25px; margin: 25px;">Red</button>
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll('button')
+
+    const body = document.querySelector('body')
+    
+    buttons.forEach(function(button){
+        console.log(button);
+        button.addEventListener('click',function(e){
+            console.log(e)
+            console.log(e.target)
+            if(e.target.id == 'grey'){
+                body.style.backgroundColor = e.target.id
+            }
+            if(e.target.id == 'Yellow'){
+                body.style.backgroundColor = e.target.id
+            }
+            if(e.target.id == 'green'){
+                body.style.backgroundColor = e.target.id
+            }
+            if(e.target.id == 'red'){
+                body.style.backgroundColor = e.target.id
+            }
+        })
+    })
+   
+</script>
+</html>
