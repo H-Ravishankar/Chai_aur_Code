@@ -2,6 +2,9 @@
 //     // do an async tasks
 //     // db calls, cryptography, network
 
+// const { log } = require("console");
+// const { response } = require("express");
+
 //     setTimeout(function(){
 //         console.log("Async task is complete");
 //         resolve()
@@ -90,12 +93,70 @@
 // }
 // getAllUser()
 
+// fetch('https://jsonplaceholder.typicode.com/users')
+// .then(function(response){
+//     return response.json()
+// }).then((data)=>{
+//       console.log(data)
+// })
+// .catch((error)=>{
+//     console.log(error);
+// })
+
+// const promiseOne = new Promise(function(resolve,reject){
+//     //db calls, crypto, network
+//     setTimeout(() => {
+//         console.log("Promise consumed")
+//         resolve()
+//     }, 1000);
+// })
+
+// promiseOne.then(()=>{
+//     console.log("then called");
+// })
+
+// const PromiseTwo = new Promise(function(resolve,reject){
+//     setTimeout(() => {
+//         resolve({username: "abc", password: "123"})
+//     }, 1000);
+// })
+// PromiseTwo.then((user)=>{
+//     console.log(user)
+// })
+
+// const PromiseThree = new Promise((resolve, reject)=>{
+//       let error = false;
+//       if(!error){
+//         resolve({username: "ram", password: "abc"})
+//       }else{
+//           reject("Error")
+//       }
+// })
+// PromiseThree.then((User)=>{
+//         console.log(User)
+//         return(User.username)
+// }).then((username)=>{
+//     console.log(username)
+// })
+// .catch((err)=>{
+//     console.log(err)
+// })
+
+
 fetch('https://jsonplaceholder.typicode.com/users')
-.then(function(response){
-    return response.json()
-}).then((data)=>{
+.then((response)=>{
+    return response.json() 
+    
+})
+.then((data)=>{
       console.log(data)
 })
 .catch((error)=>{
-    console.log(error);
+    console.log(error)
 })
+
+
+
+
+
+
