@@ -8,10 +8,10 @@ function adminMiddleware(req, res, next){
         password: password
     }).then(function(value){
         if(value){
-            next
+            next()
         }else{
-            res.status.json({
-                msg: "User not exits....."
+            res.status(200).json({
+                msg: "Admin not exits....."
             })
         }
     })
